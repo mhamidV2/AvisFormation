@@ -1,0 +1,14 @@
+C:\Users\mzeha\source\repos\AvisFormation.WebUi\AvisFormation.Data\bin\Release\AvisFormation.Data.dll.config
+C:\Users\mzeha\source\repos\AvisFormation.WebUi\AvisFormation.Data\bin\Release\AvisFormation.Data.dll
+C:\Users\mzeha\source\repos\AvisFormation.WebUi\AvisFormation.Data\bin\Release\AvisFormation.Data.pdb
+C:\Users\mzeha\source\repos\AvisFormation.WebUi\AvisFormation.Data\bin\Release\EntityFramework.dll
+C:\Users\mzeha\source\repos\AvisFormation.WebUi\AvisFormation.Data\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\mzeha\source\repos\AvisFormation.WebUi\AvisFormation.Data\bin\Release\EntityFramework.xml
+C:\Users\mzeha\source\repos\AvisFormation.WebUi\AvisFormation.Data\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\mzeha\source\repos\AvisFormation.WebUi\AvisFormation.Data\bin\Release\fr\EntityFramework.resources.dll
+C:\Users\mzeha\source\repos\AvisFormation.WebUi\AvisFormation.Data\bin\Release\fr\EntityFramework.SqlServer.resources.dll
+C:\Users\mzeha\source\repos\AvisFormation.WebUi\AvisFormation.Data\obj\Release\AvisFormation.Data.csprojResolveAssemblyReference.cache
+C:\Users\mzeha\source\repos\AvisFormation.WebUi\AvisFormation.Data\obj\Release\AvisFormation.Data.csproj.CoreCompileInputs.cache
+C:\Users\mzeha\source\repos\AvisFormation.WebUi\AvisFormation.Data\obj\Release\AvisFormation.Data.csproj.CopyComplete
+C:\Users\mzeha\source\repos\AvisFormation.WebUi\AvisFormation.Data\obj\Release\AvisFormation.Data.dll
+C:\Users\mzeha\source\repos\AvisFormation.WebUi\AvisFormation.Data\obj\Release\AvisFormation.Data.pdb

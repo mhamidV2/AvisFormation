@@ -1,0 +1,39 @@
+﻿@model AvisFormation.WebUi.Models.FormationAvecAvisViewModel
+@{
+    ViewBag.Title = Model.FormationNom;
+}
+
+<div class="container bg-white padding30">
+    <h2>@Model.FormationNom</h2>
+
+    @if (TempData["Message"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["Message"]
+        </div>
+    }
+
+    <br />
+    @Html.ActionLink("Laissez un avis sur cette formation", "LaisserUnAvis", "Avis", new { nomSeo = Model.FormationNomSeo }, new { @class = "big-link" })
+    <p class="margin10"><b>@Model.FormationDescription</b></p>
+
+    @foreach (var avis in Model.Avis)
+    {
+        <article class="bg-grey avis">
+            <div>
+                <i>@avis.Nom</i>
+                <span class="left-margin">
+                    @for (var i = 0; i < avis.Note; i++)
+                    {
+                        <span class="glyphicon glyphicon-star orange"></span>
+                    }
+                </span>
+            </div>
+
+            <br />
+            <div>@avis.Description</div>
+        </article>
+        <br />
+    }
+
+</div>

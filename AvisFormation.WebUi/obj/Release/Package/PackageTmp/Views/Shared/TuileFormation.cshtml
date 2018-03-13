@@ -1,0 +1,26 @@
+﻿@model AvisFormation.Data.FormationAvecAvisDto
+
+<article class="info-block col-md-3 col-sm-6">
+    <h4>
+        @Html.ActionLink(Model.Formation.Nom, "DetailsFormation", "Formation", new { nomSeo = Model.Formation.NomSeo }, new { @class = "lien-formation" })
+    </h4>
+
+    <p>
+        @if (Model.Note == 0)
+        {
+            <span>Aucun avis</span>
+
+        }
+        else
+        {
+
+            for (var i = 0; i < Model.Note; i++)
+            {
+                <span class="glyphicon glyphicon-star orange"></span>
+            }
+
+            <span>@Model.Note / 5</span>
+        }
+    </p>
+    <p>@Model.Formation.Description</p>
+</article>

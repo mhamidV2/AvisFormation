@@ -1,0 +1,26 @@
+﻿@model AvisFormation.WebUi.Models.AccueilViewModel
+
+@{
+    ViewBag.Title = "Toutes les formations";
+}
+<div class="container bg-white padding30">
+
+    <h2>Toutes les formations</h2>
+
+    <div class="container text-center">
+        @foreach (var dto in Model.ListFormations)
+        {
+            @Html.Partial("TuileFormation",dto)
+        }
+    </div>
+
+    @*
+        @foreach (var formation in Model)
+        {
+            <div><span>Nom :</span><span>@formation.Nom</span></div>
+            <div><span>Description :</span><span>@formation.Description</span></div>
+            <div>formation.NomSeo</div>
+            <div>@formation.NomSeo</div>
+        }
+    *@
+</div>

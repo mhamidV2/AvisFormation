@@ -1,0 +1,94 @@
+﻿@model AvisFormation.WebUi.Models.AccueilViewModel
+@{
+    ViewBag.Title = "Accueil";
+}
+
+<div class="jumbotron text-center">
+    <h1>Avis Formation</h1>
+    <p class="lead">Choisissez la meilleure formation !</p>
+</div>
+
+<div class="container text-center">
+    @foreach (var dto in Model.ListFormations)
+    {
+        @Html.Partial("TuileFormation", dto)
+    }
+</div>
+
+<div class="container bg-white text-center padding30">
+    <h2>Pourquoi utiliser Avis Formation ?</h2>
+    <h3>Benéfices formateur</h3>
+
+    <div class="row">
+        <div class="col-md-6">
+            <span class="glyphicon glyphicon-shopping-cart logo-small"></span>
+            <h4>Conversion</h4>
+            <p>Améliorez votre taux de converstion</p>
+        </div>
+        <div class="col-md-6">
+            <span class="glyphicon glyphicon-fullscreen logo-small"></span>
+            <h4>Visibilité</h4>
+            <p>Augmentez votre visibilité</p>
+        </div>
+        <div class="col-md-6">
+            <span class="glyphicon glyphicon-tree-deciduous logo-small"></span>
+            <h4>Fidélisation</h4>
+            <p>Obtenez plus de clients fidèles et engagés</p>
+        </div>
+        <div class="col-md-6">
+            <span class="glyphicon glyphicon-heart-empty logo-small"></span>
+            <h4>Confiance</h4>
+            <p>Vous bénéficiez des retours d'anciens élèves</p>
+        </div>
+    </div>
+</div>
+
+<div class="container text-center padding30">
+    <div class="row">
+        <div class="col-md-8">
+            <h3>Professionnels de la formation, affichez notre badge sur votre site pour augmenter vos conversions !</h3>
+        </div>
+        <div class="col-md-4">
+            <div class="widget">
+                <div>
+                    Avis Élèves 4.8/5
+                    @for (var i = 0; i < 5; i++)
+                    {
+                        <span class="glyphicon glyphicon-star orange"></span>
+                    }
+                </div>
+                <div class="widget-bottom">
+                    Avis récoltés par Avis formation.fr
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container bg-white text-center padding30">
+    <div class="row">
+        <div class="col-md-3">
+            <p class="bigpercent">85%</p>
+            <p><b>85% des internautes consultent les avis clients avant d'achetr en ligne</b></p>
+        </div>
+
+        <div class="col-md-3">
+            <p class="bigpercent">91%</p>
+            <p><b>91% de ceux qui lisent les avis les considèrent comme le vecteur numéro 1 dans leur décision d'achat</b></p>
+
+        </div>
+
+        <div class="col-md-3">
+            <p class="bigpercent">25%</p>
+            <p><b>+25% du taux de conversion pour les sites avec les étoiles Google </b></p>
+
+        </div>
+
+        <div class="col-md-3">
+            <p class="bigpercent">80%</p>
+            <p><b>80% des avis ont une note et un commentaire positif</b></p>
+
+        </div>
+    </div>
+
+</div>
