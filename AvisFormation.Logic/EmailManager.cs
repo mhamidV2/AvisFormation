@@ -12,14 +12,32 @@ namespace AvisFormation.Logic
     {
         public void SendEmail(string titre, string message, string email)
         {
+            MailMessage msg = GetMailMessage(
+                new MailAddress(email),
+                new MailAddress("administrateur@avisformation.fr"),
+                "Nouveau message AvisFormations",
+                message
+            );
+
+            SendMail(msg);
+        }
+
+        public MailMessage GetMailMessage(MailAddress from, MailAddress to, string subject, string body)
+        {
             MailMessage msg = new MailMessage();
-            msg.From = new MailAddress(email);
-            msg.To.Add(new MailAddress("administrateur@avisformation.fr"));
-            msg.Subject = "Nouveau message AvisFormations";
+            msg.From = from;
+            msg.To.Add(to);
+            msg.Subject = subject;
+            msg.Body = body;
 
-            msg.Body = message;
+            return msg;
+        }
 
-            var client = new SmtpClient
+
+        // Ajouter les valeurs "fake" au fichier de config
+        public SmtpClient GetSmtpClient()
+        {
+            return new SmtpClient
             {
                 Host = "ns0.ovh.net",
                 Port = 587,
@@ -29,8 +47,11 @@ namespace AvisFormation.Logic
                 Timeout = 30 * 1000,
                 Credentials = new NetworkCredential("", "")
             };
+        }
 
-            client.Send(msg);
+        public void SendMail(MailMessage message)
+        {
+            GetSmtpClient().Send(message);
         }
     }
 }

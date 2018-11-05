@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using System.Net.Mail;
@@ -26,8 +27,9 @@ namespace AvisFormation.WebUi.Controllers
                 mger.SendEmail(nom, message, email);
 
             }
-            catch
+            catch (Exception ex)
             {
+                Debug.WriteLine(ex);
                 return View("ErreurEnvoi");
             }
             return View("Merci");

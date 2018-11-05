@@ -70,7 +70,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AvisFormationDbModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Class1.cs" />
     <Compile Include="Formation.cs">
       <DependentUpon>AvisFormationDbModel.tt</DependentUpon>
     </Compile>
